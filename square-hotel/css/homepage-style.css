@@ -1,0 +1,143 @@
+/* banner area */
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/rsz_lounge.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fffafa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.text {
+  width: 90%;
+  height: 30%;
+}
+
+.text .heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+}
+
+.text .paragraph {
+  font-size: .9rem;
+}
+
+.booking {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  color: black;
+  background-color: #fffafa;
+}
+
+.booking .input,
+.booking button {
+  width: 20%;
+}
+
+.booking .input {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+.input label {
+  font-size: .55rem;
+  font-weight: 600;
+  padding: 0;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.booking select option {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.booking button {
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #808052;
+  color: #fffafa;
+  font-family: 'Poppins', sans-serif;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.booking button:active {
+  background-color: #79794f;
+}
+
+@media screen and (min-width: 790px) {
+  .banner {
+    height: 85.5vh;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .booking {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+  }
+
+  .booking .input,
+  .booking button {
+    width: 100%;
+  }
+
+  .booking .input {
+    display: grid;
+    grid-template-rows: auto 40px;
+    width: 90%;
+    margin: 5px auto;
+    background-color: #c0c0316e;
+    border-radius: 3px;
+  }
+
+  .booking .input input, .booking .input select {
+    padding: 0 12px;
+  }
+
+  .booking .room {
+    margin-bottom: 10px;
+  }
+
+  .input label {
+    font-size: .6rem;
+    font-weight: 600;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.5px solid #79794f52;
+    line-height: 20px;
+  }
+
+  .booking button {
+    font-size: .8rem;
+    padding: 10px 2px;
+  }
+}

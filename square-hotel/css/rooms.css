@@ -1,0 +1,257 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;
+}
+body{
+    background-color: #fffafa;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* main */
+.main-page {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+/* sections */
+.standard {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-gap: 20px;
+}
+
+.text {
+    text-align: left;
+}
+
+.heading {
+    color: #808052;
+    font-family: 'Playfair Display', serif;
+}
+
+.body {
+    margin: 10px 0;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.standard span,
+.economy span {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.standard span.price,
+.economy span.price {
+    font-size: 0.9rem;
+    color: #808052;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.standard a.book-now,
+.economy a.book-now {
+    background-color: #808052;
+    color: #fffafa;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.standard a.more,
+.economy a.more {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    font-size: .7rem;
+    margin: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
+.standard a.more::after,
+.economy a.more::after {
+    content: ">";
+    border-bottom: none;
+}
+
+.standard .photo img,
+.economy .photo img {
+    width: 100%;
+    height: 456px;
+}
+
+.economy {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-gap: 20px;
+}
+
+.ml {
+    margin-left: 20px;
+}
+
+.mr {
+    margin-right: 20px;
+}
+
+.mt {
+    margin-top: 20px;
+}
+/* For the mobile view */
+@media only screen and (max-width: 768px) {
+    /* take the logo to the left, hide the nav links, and show the burger icon */
+
+     .header{
+        display:block;
+        overflow: hidden;
+     }
+     .header .head {
+         margin-left: 15px;
+     }
+    /*  shift logo to left*/
+    .header .heading{
+        position: relative;
+        width: 40%;
+    }
+    /* arrange the nav links ontop of each other*/
+    .header .nav-links{
+        display: block;
+        margin-top: -40px;
+        background-color: white;
+    }
+    .nav-links>div{
+        display: block;
+        width: 100%;
+    }
+    .nav-links>div div{
+        text-align: center;
+    }
+    .nav-links>div div:hover{
+        background-color: slategray;
+    }
+    .nav-links>div div a{
+        display:block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        transition: transform 0.4s linear;
+        
+    }
+    .nav-links>div div a:hover {
+        transform: translateX(20px);
+        color: white;
+    }
+    /* hide nav bar */
+    .header .nav-links{
+        max-height: 0;
+        pointer-events: none;
+        transition: max-height 0.3s linear;
+    }
+
+    .header .nav-links-show{
+        max-height: 100vh;
+        pointer-events: all;
+    }
+    /* show burger */
+    .burger{
+        position: relative;
+        top:-35px;
+        padding: 10px;
+        transition: transform 0.3s linear;
+        width: fit-content;
+        height: fit-content;
+        margin-left: auto;
+    }
+    .burger:hover{
+        transform: scale(1.1);
+    }
+    .burger .line{
+        display:block;
+        transition: all 0.3s linear;
+    }
+    
+    /* turn burger to X */
+    .x-bar .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .x-bar .line2{
+        opacity: 0;
+    }
+    .x-bar .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+
+    .standard {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        grid-template-columns: 50% 50%;
+    }
+
+    .standard .text-small-screen {
+        order: 2;
+    }
+
+    .standard .img-small-screen {
+        order: 1;
+        margin-top: 20px;
+    }
+
+    .economy {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    .economy .photo img,
+    .standard .photo img {
+        height: 200px;
+    }
+
+    .economy .text .heading,
+    .standard .text .heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .economy .text .price,
+    .standard .text .price {
+        font-size: 15px;
+    }
+
+    .economy .text .links .book-now,
+    .standard .text .links .book-now {
+        font-size: 12px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .economy .text .links .book-now,
+    .standard .text .links .book-now {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;
+}
+body{
+    background-color: #fffafa;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.header{
+    position: relative;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    background: #FFFFF0
+}
+/* the logo */
+.header .heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #808052;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    font-weight: 100;
+    pointer-events: none;
+    margin: 0;
+    line-height: unset;
+}
+.head{
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* the nav links */
+.header .nav-links{
+    /* border:1px solid red; */
+    text-transform: capitalize;
+    width: 100%;
+    margin-top:60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-links>div{
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    width: 40%;
+}
+.nav-links>div a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 600;
+}
+.nav-links>div .active a{
+    color: #808052;
+}
+/* the burger menu */
+.burger{
+    cursor: pointer;
+}
+.burger .line{
+    width: 30px;
+    height: 3px;
+    background-color: #808052;
+    margin: 5px;
+    display:none;
+}
+
+
+.page-title{
+    background-color: #808052;
+    padding: 30px;
+    font-family: 'Playfair Display', serif;
+    color:#fffafa;
+    font-weight: 700;
+}
+.page-title .title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: unset;
+}
+
+/* footer */
+footer{
+    background-color: rgb(45,45,45);
+    padding: 50px;
+    color: #fffafa;
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+}
+footer h5 {
+    font-size: .8rem;
+}
+footer .above{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-bottom: 2px solid #fffafa;
+    padding: 30px;
+}
+/* faqs part */
+.above .faqs h5{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.above .faqs ul{
+    list-style: none;
+    text-transform: capitalize;
+}
+.above .faqs ul a{
+    color: #fffafa;
+    text-decoration: none;
+}
+.above .faqs ul a:hover{
+    color: #808052;
+}
+
+/* newletter part */
+.newsletter .overflow-hidden{
+    overflow: hidden;
+}
+.above .newsletter .input-container{
+    margin-top: 30px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    height: 30px;
+    width: 250px;
+    position: relative;
+}
+
+.above .newsletter .input-container input{
+    width: 90%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #fffafa;
+    font-family: 'Poppins', sans-serif;
+}
+.above .newsletter .input-container input::placeholder{
+    color:#ccc;
+    font-family: 'Poppins', sans-serif;
+}
+.above .newsletter .input-container button{
+    width: 10%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: #fffafa;
+    transition: color .2s linear;
+}
+.above .newsletter .input-container button:hover{
+    color: #808052;
+}
+.border-transition{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-bottom: 2px solid #fffafa;
+    bottom: -1.5px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s linear;
+    pointer-events: none;
+}
+.input-container input:focus + .border-transition,
+.input-container input:valid + .border-transition{
+    transform: translateX(0%);
+}
+
+/* below */
+footer .below{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+.below .social-icons{
+    font-size: 1.2rem;
+}
+.below .social-icons a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+.below .social-icons a:hover{
+    color: #808052;
+}
+
+
+/* For the mobile view */
+@media only screen and (max-width: 768px) {
+    /* take the logo to the left, hide the nav links, and show the burger icon */
+
+     .header{
+        display:block;
+        overflow: hidden;
+     }
+     .header .head {
+         margin-left: 15px;
+     }
+    /*  shift logo to left*/
+    .header .heading{
+        position: relative;
+        width: 40%;
+    }
+    /* arrange the nav links ontop of each other*/
+    .header .nav-links{
+        display: block;
+        margin-top: -40px;
+        background-color: white;
+    }
+    .nav-links>div{
+        display: block;
+        width: 100%;
+    }
+    .nav-links>div div{
+        text-align: center;
+    }
+    .nav-links>div div:hover{
+        background-color: slategray;
+    }
+    .nav-links>div div a{
+        display:block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        transition: transform 0.4s linear;
+        
+    }
+    .nav-links>div div a:hover {
+        transform: translateX(20px);
+        color: white;
+    }
+    /* hide nav bar */
+    .header .nav-links{
+        max-height: 0;
+        pointer-events: none;
+        transition: max-height 0.3s linear;
+    }
+
+    .header .nav-links-show{
+        max-height: 100vh;
+        pointer-events: all;
+    }
+    /* show burger */
+    .burger{
+        position: relative;
+        top:-35px;
+        padding: 10px;
+        transition: transform 0.3s linear;
+        width: fit-content;
+        height: fit-content;
+        margin-left: auto;
+    }
+    .burger:hover{
+        transform: scale(1.1);
+    }
+    .burger .line{
+        display:block;
+        transition: all 0.3s linear;
+    }
+    
+    /* turn burger to X */
+    .x-bar .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .x-bar .line2{
+        opacity: 0;
+    }
+    .x-bar .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+    /* reduce the padding of the  banner*/
+    .page-title .title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .standard {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        grid-template-columns: 50% 50%;
+    }
+
+    .standard .text-small-screen {
+        order: 2;
+    }
+
+    .standard .img-small-screen {
+        order: 1;
+        margin-top: 20px;
+    }
+
+    .economy {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    .economy .photo img,
+    .standard .photo img {
+        height: 200px;
+    }
+
+    .economy .text .heading,
+    .standard .text .heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .economy .text .price,
+    .standard .text .price {
+        font-size: 15px;
+    }
+
+    .economy .text .links .book-now,
+    .standard .text .links .book-now {
+        font-size: 12px;
+    }
+
+     /* footer */
+    /* arrange the footer items in rows */
+    footer{
+        padding: 30px;
+    }
+    footer .above{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    footer .above>div{
+        margin: 30px 0;
+    }
+    
+    .above .newsletter .input-container{
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width: 600px){
+    footer .below{
+        flex-direction: column;
+    }
+    .below .social-icons{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .copyright{
+        font-size: 0.7rem;
+    }
+    .copyright .head{
+        font-size: 1.1rem;
+    }
+}

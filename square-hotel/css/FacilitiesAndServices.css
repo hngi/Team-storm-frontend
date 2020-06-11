@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.facilities-and-services-title {
+  background-color: #808052;
+  color: #fffff0;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.facilities-and-services-container {
+  padding: 3rem 2rem;
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.facilities-and-services-content {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+body {
+  font-family: Playfair Display, Arial, sans-serif;
+  background-color: var(--background_color_one);
+}
+
+.facilities-and-services-picture {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.facilities-and-services-picture-title {
+  color: #808052;
+}
+
+.facilities-and-services-picture-description {
+  color: #333333;
+}
+
+.others {
+  width: 45%;
+  display: inline-block;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .facilities-and-services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .facilities-and-services-content {
+    width: 45%;
+    text-align: center;
+  }
+
+  .left {
+    text-align: right;
+  }
+
+  .right {
+    text-align: left;
+  }
+
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .text-size {
+    font-size: 18px;
+    padding: 5px 5px;
+  }
+
+  .text-small {
+    font-size: 22px;
+  }
+
+  .text-smaller {
+    font-size: 16px;
+  }
+
+  .fa-paper-plane {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .facilities-and-services-container {
+    width: 80%;
+  }
+
+  .facilities-and-services-content {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+.facilities-and-services {
+  display: flex;
+  justify-content: center;
+}
